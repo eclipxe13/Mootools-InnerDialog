@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample 1</title>
+        <link href="../js/InnerDialog/InnerDialog.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Mootools InnerDialog class</h1>
+        <div>
+            <p>InnerDialog is a mootools class to create dialogs</p>
+            <pre><code>
+                new InnerDialog({
+                    title: 'Hello world',
+                    closeText: 'X',
+                    closeOnClickMask: true
+                })
+                .setContent('Hello world!')
+                .open();
+            </code></pre>
+            <button type="button" id="case1">Test it!</button>
+        </div>
+        <div>
+            <p>Wait Message</p>
+            <button type="button" id="case2">Test it!</button>
+        </div>
+        
+        <script src="../js/mootools/mootools-core-1.4.5-full-compat.js" type="text/javascript"></script>
+        <script src="../js/mootools/mootools-more-1.4.0.1.js" type="text/javascript"></script>
+        <script src="../js/InnerDialog/InnerDialog.js" type="text/javascript"></script>
+        <script src="../js/InnerDialog/WaitMessageDialog.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            window.addEvent('domready', function () {
+                $("case1").addEvent('click', function () {
+                    new InnerDialog({
+                        title: 'Hello world',
+                        closeText: 'X',
+                        closeOnClickMask: true
+                    })
+                    .setContent('Hello world!')
+                    .open();
+                });
+                $("case2").addEvent('click', function () {
+                    new WaitMessageDialog({
+                        title: ''
+                    })
+                    .setMessage('Will close automatically!', null, 4);
+                });
+            });
+        </script>
+    </body>
+</html>

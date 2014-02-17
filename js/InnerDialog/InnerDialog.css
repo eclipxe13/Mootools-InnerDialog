@@ -1,0 +1,38 @@
+/*
+ * Default style sheet for Inner Dialog
+ */
+
+.InnerDialog-mask {
+    opacity: 0.5;
+    z-index: 999;
+    background: #999;
+}
+
+div.InnerDialog {
+    position: absolute;
+    /* min-height: 10em; */
+    min-width:  5em;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: none;
+}
+
+div.InnerDialog .InnerDialogCaption {
+    background-color: #000;
+    padding: 4px 4px;
+    color: #fff;
+}
+
+div.InnerDialog .InnerDialogCaption span.InnerDialogTitle {
+    font-weight: 700;
+}
+
+div.InnerDialog .InnerDialogCaption a.InnerDialogClose {
+    float: right;
+    color: #fff;
+    text-decoration: none;
+}
+
+div.InnerDialog .InnerDialogBody {
+    margin: 10px;
+}
